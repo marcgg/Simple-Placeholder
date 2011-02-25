@@ -1,0 +1,3 @@
+= To Use
+  $('input:text[placeholder]').simplePlaceholder();
+  $('textarea:text[placeholder]').simplePlaceholder();
