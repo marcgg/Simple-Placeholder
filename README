@@ -1,4 +1,4 @@
 To use
 
 $('input:text[placeholder]').simplePlaceholder();
-$('textarea:text[placeholder]').simplePlaceholder();
+$('textarea[placeholder]').simplePlaceholder();
