@@ -46,8 +46,11 @@ Simple Placeholder
 				var $this = $(this);
 				$this.focus($.simplePlaceholder.hide_placeholder);
 				$this.blur($.simplePlaceholder.show_placeholder);
-				$this.val($this.attr("placeholder"));
-				$this.addClass("simple-placeholder")
+				if($this.val()='') {
+					$this.val($this.attr("placeholder"));
+					$this.addClass($.simplePlaceholder.placeholder_class);
+				}
+				$this.addClass("simple-placeholder");
 				$(this.form).submit($.simplePlaceholder.prevent_placeholder_submit);
 			});
 		}
