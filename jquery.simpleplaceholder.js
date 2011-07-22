@@ -46,7 +46,7 @@ Simple Placeholder
 				var $this = $(this);
 				$this.focus($.simplePlaceholder.hide_placeholder);
 				$this.blur($.simplePlaceholder.show_placeholder);
-				if($this.val()='') {
+				if($this.val() == '') {
 					$this.val($this.attr("placeholder"));
 					$this.addClass($.simplePlaceholder.placeholder_class);
 				}
