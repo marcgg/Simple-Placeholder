@@ -27,7 +27,7 @@ If you want to customize the appearance of the text used as placeholder,
 there is a class added to the field that you can use. It defaults to `placeholding` but you can override it:
 
 ```javascript
-    $('textarea[placeholder]').simplePlaceholder({placeholder_class: "MyCustomClass"});
+    $('textarea[placeholder]').simplePlaceholder({placeholderClass: "MyCustomClass"});
 ```
 
 Contribute / Contact
