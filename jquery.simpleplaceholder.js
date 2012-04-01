@@ -1,61 +1,60 @@
-/******************************
-
-Simple Placeholder
-
-******************************/
+/*
+ * Simple Placeholder by @marcgg under MIT License
+ * Report bugs or contribute on Gihub: https://github.com/marcgg/Simple-Placeholder
+*/
 
 (function($) {
-	$.simplePlaceholder = {
-		placeholder_class: null,
+  $.simplePlaceholder = {
+    placeholder_class: null,
 
-		hide_placeholder: function(){
-			var $this = $(this);
-			if($this.val() == $this.attr('placeholder')){
-				$this.val("").removeClass($.simplePlaceholder.placeholder_class);
-			}
-		},
+    hide_placeholder: function(){
+      var $this = $(this);
+      if($this.val() == $this.attr('placeholder')){
+        $this.val("").removeClass($.simplePlaceholder.placeholder_class);
+      }
+    },
 
-		show_placeholder: function(){
-			var $this = $(this);
-			if($this.val() == ""){
-				$this.val($this.attr('placeholder')).addClass($.simplePlaceholder.placeholder_class);
-			}
-		},
+    show_placeholder: function(){
+      var $this = $(this);
+      if($this.val() == ""){
+        $this.val($this.attr('placeholder')).addClass($.simplePlaceholder.placeholder_class);
+      }
+    },
 
-		prevent_placeholder_submit: function(){
-			$(this).find(".simple-placeholder").each(function(e){
-				var $this = $(this);
-				if($this.val() == $this.attr('placeholder')){
-					$this.val('');
-				}
-			});
-			return true;
-		}
-	};
+    prevent_placeholder_submit: function(){
+      $(this).find(".simple-placeholder").each(function(e){
+        var $this = $(this);
+        if($this.val() == $this.attr('placeholder')){
+          $this.val('');
+        }
+      });
+      return true;
+    }
+  };
 
-	$.fn.simplePlaceholder = function(options) {
-		if(document.createElement('input').placeholder == undefined){
-			var config = {
-				placeholder_class : 'placeholding'
-			};
+  $.fn.simplePlaceholder = function(options) {
+    if(document.createElement('input').placeholder == undefined){
+      var config = {
+        placeholder_class : 'placeholding'
+      };
 
-			if(options) $.extend(config, options);
-			$.simplePlaceholder.placeholder_class = config.placeholder_class;
+      if(options) $.extend(config, options);
+      $.simplePlaceholder.placeholder_class = config.placeholder_class;
 
-			this.each(function() {
-				var $this = $(this);
-				$this.focus($.simplePlaceholder.hide_placeholder);
-				$this.blur($.simplePlaceholder.show_placeholder);
-				if($this.val() == '') {
-					$this.val($this.attr("placeholder"));
-					$this.addClass($.simplePlaceholder.placeholder_class);
-				}
-				$this.addClass("simple-placeholder");
-				$(this.form).submit($.simplePlaceholder.prevent_placeholder_submit);
-			});
-		}
+      this.each(function() {
+        var $this = $(this);
+        $this.focus($.simplePlaceholder.hide_placeholder);
+        $this.blur($.simplePlaceholder.show_placeholder);
+        if($this.val() == '') {
+          $this.val($this.attr("placeholder"));
+          $this.addClass($.simplePlaceholder.placeholder_class);
+        }
+        $this.addClass("simple-placeholder");
+        $(this.form).submit($.simplePlaceholder.prevent_placeholder_submit);
+      });
+    }
 
-		return this;
-	};
+    return this;
+  };
 
 })(jQuery);
