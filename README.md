@@ -11,7 +11,7 @@ How to Use
 Write your HTML as you would normaly:
     
 ```html
-    <input type="text" placeholder="Something to be hold in place" />
+    <input type="text" placeholder="Something to be held in place" />
 ```
 
 Then you simply have to target each types of inputs/textarea you will use:
