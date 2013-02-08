@@ -9,7 +9,7 @@
 
     hidePlaceholder: function(){
       var $this = $(this);
-      if($this.val() == $this.attr('placeholder')){
+      if($this.val() == $this.attr('placeholder') && $this.hasClass($.simplePlaceholder.placeholderClass)){
         $this.val("").removeClass($.simplePlaceholder.placeholderClass);
       }
     },
@@ -24,7 +24,7 @@
     preventPlaceholderSubmit: function(){
       $(this).find(".simple-placeholder").each(function(e){
         var $this = $(this);
-        if($this.val() == $this.attr('placeholder')){
+        if($this.val() == $this.attr('placeholder') && $this.hasClass($.simplePlaceholder.placeholderClass)){
           $this.val('');
         }
       });
