@@ -11,23 +11,23 @@ How to Use
 Write your HTML as you would normaly:
     
 ```html
-    <input type="text" placeholder="Something to be held in place" />
+<input type="text" placeholder="Something to be held in place" />
 ```
 
 Then you simply have to target each types of inputs/textarea you will use:
 
 ```javascript
-    $('textarea[placeholder]').simplePlaceholder();
-    $('input:text[placeholder]').simplePlaceholder(); // classic input[type=text]
-    $('input:email[placeholder]').simplePlaceholder(); // email fields input[type=email]
-    [...] // target other input types you need
+$('textarea[placeholder]').simplePlaceholder();
+$('input:text[placeholder]').simplePlaceholder(); // classic input[type=text]
+$('input:email[placeholder]').simplePlaceholder(); // email fields input[type=email]
+[...] // target other input types you need
 ```
 
 If you want to customize the appearance of the text used as placeholder, 
 there is a class added to the field that you can use. It defaults to `placeholding` but you can override it:
 
 ```javascript
-    $('textarea[placeholder]').simplePlaceholder({ placeholderClass: "MyCustomClass" });
+$('textarea[placeholder]').simplePlaceholder({ placeholderClass: "MyCustomClass" });
 ```
 
 Contribute / Contact
