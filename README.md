@@ -40,7 +40,7 @@ You can contact me on github or on twitter via [@marcgg](http://twitter.com/marc
 License
 ---
 
-This project is under MIT License, copyright (c) 2010-2015 Marc G Gauthier
+This project is under MIT License, copyright (c) 2010-2016 Marc G Gauthier
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
